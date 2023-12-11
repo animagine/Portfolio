@@ -1,12 +1,15 @@
 * {
+
   box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  
 }
 
 /* Typography styles */
@@ -24,22 +27,47 @@ p {
   margin: 0;
 }
 
-h1 {
-  color: aliceblue;
-}
 
 /* header styles */
-.menu {
-  display: flex;
-  justify-content: space-around;
-  color: aquamarine;
-}
 
-.menu li {
-  display: inline;
-  border-bottom-style: solid;
-}
-
-header {
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 80px;
   background-color: black;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
 }
+
+.logo {
+  font-size: 32px;
+  color:cornflowerblue;
+  font-weight: 800;
+}
+
+.navbar a{
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: cornflowerblue;
+  text-decoration: none;
+  margin-left: 30px;  
+}
+
+.navbar a::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: cornflowerblue;
+  transition: .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+/* Hero section style*/
