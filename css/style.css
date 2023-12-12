@@ -4,10 +4,51 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
- 
-@media screen and (max-width:1100px) {
-  body{padding: 30px;}
-  .hero-banner{
+
+/* mobile screens */
+@media screen (max-width:767px) 
+{
+  
+    .hero-banner {
+      height: 50vh;
+      padding : 30px;
+    }
+
+  .about-section {
+     display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-section p {
+    padding-left: 5px;
+       }
+
+  .portfolio {
+    float: none;
+    display: grid;
+    flex-direction: column;
+  }
+
+
+}
+/* medium and tablet screens */
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 30px;
+  } 
+  .hero-banner {
+    padding: 30px;
+  }
+}
+
+/* Desktop and larger screens */
+@media screen and (max-width: 1100px) {
+  body {
+    padding: 30px;
+  }
+
+  .hero-banner {
     padding: 30px;
   }
 }
@@ -16,9 +57,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  
 }
-
 /* Typography styles */
 
 h1,
@@ -80,7 +119,7 @@ p {
 }
 /* Hero section style*/
 
-section.hero-banner {
+.hero-banner {
   height: 60vh;
   background-color: beige;
   background-image: url(../images/02-hero-bg.jpg);
@@ -88,7 +127,7 @@ section.hero-banner {
   background-position: center;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 20px;
   
 }
@@ -99,12 +138,12 @@ section .caption
   background-color: black;
 }
 
-section .main-intro{
+section .main-intro {
   color: aliceblue;
   font-size: 60px;
 }
 
-section a{
+.secondary-intro a {
   text-decoration: none;
   color: aliceblue;
   padding: 5px;
@@ -112,23 +151,154 @@ section a{
   border-radius: 5px;
 }
 
-section a:hover{
+.secondary-intro a:hover {
   transform: scale(1.2);
-}
+} 
 
-section .secondary-intro{
+section .secondary-intro {
   display: flex;
   align-items:flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 10px;
 }
 
 /* main content */
-main .page-wrapper{
-  padding: 0;
+main {
+  /* height: 60vh; */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: antiquewhite;
+  }
+
+/* About Section */
+
+
+.about-section {
+  height: 200px;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items:center;
+  justify-content: space-around;
+  background-color: aliceblue;
+  
+}
+
+.about-section p {
+  padding-left: 20px;
+  border-left: solid 2px #000000;
+}
+
+/* Portfolio setion*/
+ .left-column{
+  width: 40%;
+}
+.right-column{
+width: 60%;
+} 
+
+.portfolio-section {
+  padding: 20px;
+  display: flex;
+  align-items:flex-start;
   justify-content: space-between;
-  margin-left: 100px;
+  background-color: aliceblue;
+  
+}
+
+.portfolio-section h2{
+  display: flex;
+
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  padding-left: 60px;
+  border-left: solid 2px #000000;
+
+}
+.work {
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.work:first-child{
+  grid-column: span 3; 
+}
+
+ #work1 {
+  margin-top:20px;
+  width: 100%;
+  background-image: url("../images/02-portfolio-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#work2 {
+  margin-top: 20px;
+  background-image: url("../images/02-portfolio-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#work3 {
+  margin-top: 20px;
+  background-image: url("../images/02-portfolio-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#work4 {
+  margin-top: 20px;
+  background-image: url("../images/02-portfolio-4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#work5 {
+  margin-top: 20px;
+  background-image: url("../images/02-portfolio-4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text {
+  background: rgba(0, 0, 0, 0.695);
+  width: 100%;
+  padding: 20px 40px;
+  color: white;
+}
+
+.text p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text h2 {
+  font-size: 1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Contact section */
+
+.contact-section {
+  padding: 5%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.contact-section a {
+  padding-left: 20px;
+  text-decoration: none;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items:center;
 }
