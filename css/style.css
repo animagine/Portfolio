@@ -4,6 +4,13 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
+ 
+@media screen and (max-width:1100px) {
+  body{padding: 30px;}
+  .hero-banner{
+    padding: 30px;
+  }
+}
 
 body {
   min-height: 100vh;
@@ -43,7 +50,7 @@ p {
 
 .logo {
   font-size: 32px;
-  color:cornflowerblue;
+  color: white;
   font-weight: 800;
 }
 
@@ -51,7 +58,7 @@ p {
   position: relative;
   font-size: 16px;
   font-weight: 400;
-  color: cornflowerblue;
+  color: white;
   text-decoration: none;
   margin-left: 30px;  
 }
@@ -63,11 +70,65 @@ p {
   left: 0;
   width: 0;
   height: 2px;
-  background: cornflowerblue;
+  background:white;
   transition: .3s;
 }
 
 .navbar a:hover::before {
   width: 100%;
+
 }
 /* Hero section style*/
+
+section.hero-banner {
+  height: 60vh;
+  background-color: beige;
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+  
+}
+
+section .caption
+{
+  padding: 10px 20px;
+  background-color: black;
+}
+
+section .main-intro{
+  color: aliceblue;
+  font-size: 60px;
+}
+
+section a{
+  text-decoration: none;
+  color: aliceblue;
+  padding: 5px;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+section a:hover{
+  transform: scale(1.2);
+}
+
+section .secondary-intro{
+  display: flex;
+  align-items:flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+/* main content */
+main .page-wrapper{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 100px;
+}
