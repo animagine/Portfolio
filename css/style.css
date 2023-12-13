@@ -1,42 +1,39 @@
 * {
-
   box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
 
 /* mobile screens */
-@media screen (max-width:767px) 
-{
-  
-    .hero-banner {
-      height: 50vh;
-      padding : 30px;
-    }
+@media screen and (max-width:767px) {
+  .hero-banner {
+    height: 50vh;
+    padding: 30px;
+  }
 
   .about-section {
-     display: flex;
+    display: flex;
     flex-direction: column;
     width: 100%;
   }
+
   .about-section p {
     padding-left: 5px;
-       }
+  }
 
   .portfolio {
     float: none;
     display: grid;
     flex-direction: column;
   }
-
-
 }
-/* medium and tablet screens */
 
+/* medium and tablet screens */
 @media screen and (min-width: 768px) {
   body {
     padding: 30px;
-  } 
+  }
+
   .hero-banner {
     padding: 30px;
   }
@@ -58,21 +55,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* Typography styles */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
 p {
   margin: 0;
 }
-
 
 /* header styles */
 
@@ -83,9 +75,11 @@ p {
   padding: 10px 80px;
   background-color: black;
   display: flex;
-  justify-content: space-between ;
+  justify-content: space-between;
   align-items: center;
 }
+
+
 
 .logo {
   font-size: 32px;
@@ -297,8 +291,12 @@ width: 60%;
 .contact-section a {
   padding-left: 20px;
   text-decoration: none;
-  display:flex;
   flex-direction: row;
   align-items: center;
   justify-items:center;
+}
+
+.footer-menu {
+  display:flex;
+
 }
